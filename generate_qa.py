@@ -278,19 +278,7 @@ CoT: Let's think step by step.\n1. Identify the timeframe: The year 2011.\n2. Cl
                 outputs = self.model.generate(query, sampling_params)
                 response = outputs[0].outputs[0].text
             
-            '''
-            if self.args.prompt == 'cot':
-                response = response.strip()#.strip('\n').split('\n')[0]
-                
-                #pattern = r'### Output:(.*?)(?=\n|$)'
-                pattern = r'[#]+\s*(Output:)?\s*(.*)'
-                match = re.search(pattern, response)
-                # 检查是否有匹配
-                if match:
-                    # 抽取匹配到的字符串部分
-                    response = match.group(2)
-            '''
-
+            
         #print(response)
         #exit()
         return response
