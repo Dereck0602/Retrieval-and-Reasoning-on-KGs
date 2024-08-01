@@ -1,4 +1,4 @@
-model='/ossfs/workspace/yixin.jyx/distillcot/output/llama2_entity_rela_graph2text_text2graph_yaml_graphtune_post_qacot_2e-6_sample5_5epoch'
+model='output/llama2_entity_rela_graph2text_text2graph_yaml_graphtune_post_qacot_2e-6_sample5_5epoch'
 
 data='/ossfs/workspace/data/webcwq/'
 export CUDA_VISIBLE_DEVICES=0
