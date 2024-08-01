@@ -1,6 +1,6 @@
 model='common_base_model/llama2-7b-chat'
 data='instruction_data/instruction_entity_relation_yaml.json'
-accelerate launch --config_file default_config.yaml run_clm_deepspeed.py \
+accelerate launch --config_file default_config.yaml run_clm_finetune.py \
     --model_name_or_path ${model} \
     --train_file ${data} \
     --per_device_train_batch_size 2 \
