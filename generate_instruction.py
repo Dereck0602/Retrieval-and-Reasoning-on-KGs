@@ -330,5 +330,5 @@ def create_text2graph(data_dir, use_json=False, use_yaml=False):
 
 create_entity_data(use_yaml=True)
 create_relationship_data(use_yaml=True)
-create_graph2text('/ossfs/workspace/yixin.jyx/data/webnlg/',use_yaml=True)
-create_text2graph('/ossfs/workspace/yixin.jyx/data/webnlg/',use_yaml=True)
+create_graph2text('/ossfs/workspace/data/webnlg/',use_yaml=True)
+create_text2graph('/ossfs/workspace/data/webnlg/',use_yaml=True)
