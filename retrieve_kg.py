@@ -270,7 +270,7 @@ def meta_retrieve(dataset, model, save_path, graph=None, use_yaml=False, topk=10
 
 graph = load_graph('graph.json')
 train,val,test=load_data('/ossfs/workspace/data/webqsp/')
-model = SentenceTransformer('/ossfs/workspace/yixin.jyx/retrieve_kg_cot_neighbor_model', device='cuda')
+model = SentenceTransformer('/ossfs/workspace/model/retrieve_kg_cot_neighbor_model', device='cuda')
 retrieve(test, model, '/ossfs/workspace/webqsp_retrievekg_top50.jsonl', graph=graph, use_yaml=False, topk=50)
 #sentences_1 = ["what is the name of justin bieber brother?"]
 #sentences_2 = ["(Justin Bieber, has a half-brother, Jaxon Bieber)", "(Jaxon Bieber, is the son of, Jeremy Bieber)", "(Jeremy Bieber, has a second wife, Erin Wagner)", "(Jaxon Bieber, was born on, November 20, 2009)"]
