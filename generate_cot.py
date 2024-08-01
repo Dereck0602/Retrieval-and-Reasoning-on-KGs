@@ -65,7 +65,6 @@ def shortest_path(data_path):
             question=line['question']
             answer=line['a_entity']
             graph = line['paths']
-            # 找出最短列表的长度
             if len(graph)==0:
                 continue
             else:
