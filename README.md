@@ -1,7 +1,7 @@
 # Retrieval-and-Reasoning-on-KGs
 
 ## Data and model checkpoints
-We will release our data and models after the paper is accepted by EMNLP 2024.
+We will release our data and models as soon as possible, no later than December 16, 2024
 
 ## Step 1: Train the retrieval model
 ```
