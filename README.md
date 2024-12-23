@@ -1,7 +1,7 @@
 # Retrieval-and-Reasoning-on-KGs
 
-## Data and model checkpoints
-We will release our data and models as soon as possible, no later than December 16, 2024
+## Data
+[data](https://drive.google.com/drive/folders/1XxUqpxtP7pe3owU8Ow-0qYLytI5GzwMC?usp=drive_link)
 
 ## Step 1: Train the retrieval model
 ```
