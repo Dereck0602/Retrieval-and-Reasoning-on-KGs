@@ -33,22 +33,6 @@ def get_args():
     args = parser.parse_args()
     return args
 
-def get_embedding(sentence):
-    embedding = sentence_model.encode([sentence], convert_to_tensor=True)
-    return embedding
-
-
-def bank_init(args):
-    """Initiallize the demonstration bank and the corresponding embeddings."""
-    train_dataset, _ = load_data(args.dataset)
-    #demonstration_bank = [i["query"] + i["label"] for i in train_dataset]
-    sentences = [i["question"] for i in train_dataset]
-    print("Encoding {} train samples".format(len(sentences)))
-    embedding_bank = sentence_model.encode(sentences, convert_to_tensor=True, batch_size=1024)
-    print("Demonstration bank prepared.")
-    return embedding_bank
-
-
 
 if __name__ == "__main__":
     args = get_args()
