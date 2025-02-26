@@ -57,7 +57,7 @@ from transformers import (
 )
 from transformers.utils import check_min_version, get_full_repo_name, send_example_telemetry
 #from transformers.utils.versions import require_version
-from utils.prompter import Prompter
+from prompter import Prompter
 from peft import (
     LoraConfig,
     get_peft_model,
