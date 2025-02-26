@@ -271,12 +271,6 @@ def parse_args():
         help="Whether the various states should be saved at the end of every n steps, or 'epoch' for each epoch.",
     )
     parser.add_argument(
-        "--resume_from_checkpoint",
-        type=str,
-        default=None,
-        help="If the training should continue from a checkpoint folder.",
-    )
-    parser.add_argument(
         "--with_tracking",
         action="store_true",
         help="Whether to enable experiment trackers for logging.",
@@ -612,11 +606,8 @@ def main():
         model.train()
         if args.with_tracking:
             total_loss = 0
-        if args.resume_from_checkpoint and epoch == starting_epoch and resume_step is not None:
-            # We skip the first `n` batches in the dataloader when resuming from a checkpoint
-            active_dataloader = accelerator.skip_first_batches(train_dataloader, resume_step)
-        else:
-            active_dataloader = train_dataloader
+        
+        active_dataloader = train_dataloader
        
         for step, batch in enumerate(active_dataloader):
             with accelerator.accumulate(model):
